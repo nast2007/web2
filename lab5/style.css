@@ -1,0 +1,147 @@
+/* style.css */
+
+/* Сброс отступов у браузера для корректной работы Sticky Footer */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Обертка для всего содержимого страницы. 
+   Она растягивается на всю высоту экрана */
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Минимальная высота - 100% высоты окна просмотра */
+}
+
+/* Основной контент должен занимать все свободное место, 
+   тем самым прижимая подвал вниз */
+.main-content-area {
+    flex: 1; 
+    display: flex; /* Чтобы меню и таблица стояли рядом */
+}
+
+/* --- Стили для Главного меню (Шапка) --- */
+#main_menu {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+#main_menu a {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+#main_menu a:hover {
+    background-color: #e0e0e0;
+}
+
+/* Класс для выделенного пункта меню */
+#main_menu a.selected {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border-color: #0056b3;
+}
+
+/* --- Стили для Основного меню (Слева) --- */
+#product_menu {
+    width: 200px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    flex-shrink: 0; /* Чтобы меню не сжималось */
+}
+
+#product_menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+#product_menu a:hover {
+    background-color: #eee;
+}
+
+#product_menu a.selected {
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+}
+
+/* --- Стили для области таблицы (Центр) --- */
+#content_area {
+    padding: 20px;
+    flex-grow: 1; /* Занимает оставшееся место */
+    overflow-x: auto; /* Прокрутка, если таблица не влезает */
+}
+
+/* Табличная верстка */
+table.mult_table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+table.mult_table td {
+    border: 1px solid #999;
+    padding: 10px;
+    vertical-align: top;
+    background-color: #fff;
+}
+
+/* Блочная верстка */
+.ttRow {
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #999;
+    margin: 5px;
+    padding: 10px;
+    background-color: #fff;
+    min-width: 80px;
+    text-align: center;
+}
+
+.ttSingleRow {
+    display: inline-block;
+    border: 2px solid #007bff;
+    padding: 20px;
+    background-color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+    min-width: 150px;
+}
+
+/* Ссылки внутри таблицы */
+.num_link {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+.num_link:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+/* --- Стили для Подвала --- */
+#footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto; /* Гарантирует прижатие к низу, если flex не сработает в старых браузерах */
+    border-top: 1px solid #000;
+}
