@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+/* Стили для формы ввода */
+table#elements {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table#elements td {
+    padding: 5px;
+}
+
+.element_num {
+    width: 30px;
+    text-align: right;
+    font-weight: bold;
+    color: #555;
+}
+
+.element_row input {
+    width: 90%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.control-group label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="button"], input[type="submit"] {
+    padding: 8px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+input[type="button"] {
+    background-color: #007bff;
+    color: white;
+}
+
+input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Стили для страницы результатов */
+.result-container {
+    max-width: 900px;
+}
+
+.info-block {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.process-log {
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fafafa;
+    margin-bottom: 20px;
+}
+
+.iteration-block {
+    padding: 4px 0;
+    border-bottom: 1px solid #eee;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.iter-num {
+    color: #007bff;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.array-state {
+    color: #333;
+}
+
+.final-result {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.sorted-array {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.summary {
+    margin: 5px 0;
+    font-size: 16px;
+}

@@ -1,0 +1,112 @@
+/* style.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Шапка (header) - фиксированная, темно-зеленая, белый текст */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* Фиксированная высота */
+    background-color: #1a4d2e; /* Темно-зеленый */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Меню в шапке */
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+}
+
+/* Эффект при наведении */
+header nav a:hover {
+    background-color: #2a6e43;
+    color: #ffeb3b; /* Желтоватый отлив */
+}
+
+/* Класс для активного пункта меню (выделен цветом фона) */
+header nav a.active {
+    background-color: #ffeb3b;
+    color: #1a4d2e; /* Темно-зеленый текст на желтом фоне */
+    font-weight: bold;
+}
+
+/* Основной контент */
+main {
+    flex: 1;
+    width: 80%;
+    margin: 100px auto 80px auto; /* Отступы под fixed header и footer */
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+/* Подвал (footer) - фиксированный, темно-серый, светлый текст */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Фиксированная высота */
+    background-color: #2f4f4f; /* Темно-серый */
+    color: #d3d3d3; /* Светло-серый */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+    font-size: 0.9em;
+}
+
+/* Стили для таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+table, th, td {
+    border: 1px solid #ccc;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+/* Галлерея фотографий */
+.photo-gallery {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+.photo-gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
